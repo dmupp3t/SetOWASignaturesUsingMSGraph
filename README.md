@@ -1,3 +1,4 @@
+<div align="left">
 <!-- ABOUT THE PROJECT -->
 ## Description
 
@@ -24,3 +25,4 @@ Pull User Information From MSGraph And Set OWA Email Signatures Based On HTML Te
 
 
 - Once you have created your HTML Template you must save it to C:\temp\signature.txt or update the path in the script. 
+</div>
