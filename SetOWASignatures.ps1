@@ -33,6 +33,6 @@ foreach($user in $users){
     #Build signature HTML replacing data pulled from MSGraph 
     $HTMLSigX = $HTMLsig.replace('%%FirstName%%', $user.GivenName).replace('%%LastName%%', $user.Surname).replace('%%Title%%', $user.JobTitle).replace('%%PhoneNumber%%', $user.TelephoneNumber).replace('%%MobileNumber%%', $user.Mobile).replace('%%Email%%', $user.Mail).replace('%%Company%%', $user.CompanyName).replace('%%Street%%', $user.StreetAddress).replace('%%City%%', $user.City).replace('%%ZipCode%%', $user.PostalCode).replace('%%State%%', $user.State).replace('%%Country%%', $user.Country) 
     #Set the HTML Signature (NOTE: Roaming Signatures must be disabled or this will have no effect.) 
-    #Set-MailboxMessageConfiguration $user.Mail -SignatureHTML $HTMLSigX -AutoAddSignature $true -AutoAddSignatureOnReply $true 
+    Set-MailboxMessageConfiguration $user.Mail -SignatureHTML $HTMLSigX -AutoAddSignature $true -AutoAddSignatureOnReply $true 
 
 }
